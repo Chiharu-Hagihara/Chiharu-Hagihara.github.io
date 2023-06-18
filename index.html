@@ -119,6 +119,28 @@
         img {
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
+
+        /* リンクのスタイル */
+        .social-link {
+            display: inline-block;
+            margin-right: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            text-decoration: underline;
+        }
+
+        /* メールアドレスのスタイル */
+        .email {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .email:hover {
+            text-decoration: underline;
+        }
     </style>
     <script>
         // コメントセクションの開閉機能
@@ -150,7 +172,16 @@
             <br>
             生年月日: 2005/8/3<br>
             出身地: 香川県高松市<br>
-            学歴: 香川誠陵高等学校 普通科3年
+            <br>
+            学歴: <br>
+                香川誠陵中学校卒業<br>
+                香川誠陵高等学校 普通科3年
+        </p>
+        <h2>リンク</h2>
+        <p>
+            GitHub: <a class="social-link" href="https://github.com/Chiharu-Hagihara">GitHub</a><br>
+            Twitter: <a class="social-link" href="https://twitter.com/chiharu_mec">Twitter</a><br>
+            メールアドレス: <a class="email" href="mailto:chiharuhagihara.work@gmail.com">chiharuhagihara.work[a]gmail.com</a>
         </p>
         <a id="toggle-button" class="toggle-button" onclick="toggleComments()" href="#">Show Comments</a>
         <div id="comment-section" class="comment-section hidden">
