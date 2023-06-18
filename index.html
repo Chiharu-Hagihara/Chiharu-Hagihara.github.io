@@ -3,28 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <title>Home Page of Chiharu Hagihara</title>
+    <style>
+        /* スタイルの追加 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        img {
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        a {
+            color: #007bff;
+        }
+
+        /* 追加のスタイル */
+
+        /* ウェブサイト全体のコンテナ */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+
+        /* セクションの間の余白 */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        /* サイトのタイトル */
+        .site-title {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* インターナビゲーションリンク */
+        .nav-link {
+            display: inline-block;
+            margin-right: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* コメントセクション */
+        .comment-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+        }
+
+        /* フッター */
+        .footer {
+            text-align: center;
+            color: #777;
+        }
+
+        /* 追加の装飾 */
+
+        /* リンクホバー時の効果 */
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* セクションの背景色 */
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* コメントセクションの開閉ボタン */
+        .toggle-button {
+            display: block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* コメントセクションの表示/非表示 */
+        .comment-section.hidden {
+            display: none;
+        }
+
+        /* イメージの影効果 */
+        img {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        // コメントセクションの開閉機能
+        function toggleComments() {
+            var commentSection = document.getElementById("comment-section");
+            var toggleButton = document.getElementById("toggle-button");
+
+            if (commentSection.classList.contains("hidden")) {
+                commentSection.classList.remove("hidden");
+                toggleButton.textContent = "Hide Comments";
+            } else {
+                commentSection.classList.add("hidden");
+                toggleButton.textContent = "Show Comments";
+            }
+        }
+    </script>
 </head>
 <body>
-<h1>Welcome.</h1>
+<div class="container">
+    <h1 class="site-title">Welcome.</h1>
 
-<img src="icon.jpg" alt="" width="200" height="200"><br>
+    <img src="icon.jpg" alt="" width="200" height="200"><br>
 
-<p>
-<h2>自己紹介</h2>
-名前: Chiharu Hagihara (萩原 千陽)<br>
-ニックネーム: MEC11 etc...<br>
-<br>
-生年月日: 2005/8/3<br>
-出身地: 香川県高松市<br>
-学歴: 香川誠陵高等学校 普通科 3年<br>
-<br>
-<p><a href="https://github.com/Chiharu-Hagihara">GitHub</a></p>
-<p><a href="https://twitter.com/chiharu_mec">Twitter</a></p>
-Contact: chiharuhagihara.work[a]gmail.com
-<h2>コメント</h2>
-雑に作りました．<br>
-現在大学に向けて勉強中．量子力学に興味あり
-</p>
-
+    <div class="section">
+        <h2>自己紹介</h2>
+        <p>
+            名前: Chiharu Hagihara (萩原 千陽)<br>
+            ニックネーム: MEC11 etc...<br>
+            <br>
+            生年月日: 2005/8/3<br>
+            出身地: 香川県高松市<br>
+            学歴: 香川誠陵高等学校 普通科3年
+        </p>
+        <a id="toggle-button" class="toggle-button" onclick="toggleComments()" href="#">Show Comments</a>
+        <div id="comment-section" class="comment-section hidden">
+            <h2>コメント</h2>
+            <p>雑に作りました．</p>
+            <p>現在大学に向けて勉強中．</p>
+            <p>量子力学に興味あり</p>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    &copy; 2023 Chiharu Hagihara
+</footer>
 </body>
 </html>
